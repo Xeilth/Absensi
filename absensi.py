@@ -45,80 +45,67 @@ def TahunAkad():
 
 kodeDosen = "TI126L"
 def Dosen():
-    if kodeDosen == "TI126L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[83]").click()
-    if kodeDosen == "TI117L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[98]").click()
-    if kodeDosen == "NN257L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[96]").click()
-    if kodeDosen == "NN056L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[2]/td[2]/select/option[18]").click()
-    if kodeDosen == "TI041L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[2]/td[2]/select/option[127]").click()
-    if kodeDosen == "TI125L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[2]/td[2]/select/option[118]").click()
-    if kodeDosen == "NN258L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[2]/td[2]/select/option[97]").click()
-    if kodeDosen == "NN222L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[2]/td[2]/select/option[84]").click()
-    if kodeDosen == "TI122L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[2]/td[2]/select/option[75]").click()
-    if kodeDosen == "NN208L":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[2]/td[2]/select/option[74]").click()
+    base_option_xpath = "/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/"
+    list_kodeDosen = {
+    "TI126L": "p/table/tbody/tr[2]/td[2]/select/option[83]", 
+    "TI117L":"p/table/tbody/tr[2]/td[2]/select/option[98]", 
+    "NN257L":"p/table/tbody/tr[2]/td[2]/select/option[96]", 
+    "NN056L":"p[1]/table/tbody/tr[2]/td[2]/select/option[18]", 
+    "TI041L":"p[1]/table/tbody/tr[2]/td[2]/select/option[127]", 
+    "TI125L":"p[1]/table/tbody/tr[2]/td[2]/select/option[118]", 
+    "NN258L":"p[1]/table/tbody/tr[2]/td[2]/select/option[97]", 
+    "NN222L":"p[1]/table/tbody/tr[2]/td[2]/select/option[84]", 
+    "TI122L":"p[1]/table/tbody/tr[2]/td[2]/select/option[75]", 
+    "NN208L":"p[1]/table/tbody/tr[2]/td[2]/select/option[74]"}
+    
+    for kode, xpath in list_kodeDosen.items():
+        if kodeDosen == kode:
+            driver.find_element_by_xpath(f"{base_option_xpath}{xpath}").click()
 
 kodeMatkul = "TI43274"
 kelas = "B"
 def Matkul():
-    if kodeMatkul == "TI43274" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[4]").click()
-    if kodeMatkul == "TI43274" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[3]").click()
-    if kodeMatkul == "TI43274" and kelas == "C":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[5]").click()
-    if kodeMatkul == "TI43142" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[2]").click()
-    if kodeMatkul == "TI43142" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[3]").click()
-    if kodeMatkul == "TI43284" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[4]").click()
-    if kodeMatkul == "TI43284" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[5]").click()
-    if kodeMatkul == "TI43284" and kelas == "C":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[3]/td[2]/select/option[6]").click()
-    if kodeMatkul == "TI43446" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[2]").click()
-    if kodeMatkul == "TI3466" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[3]").click()
-    if kodeMatkul == "TI3466" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[4]").click()
-    if kodeMatkul == "TI3466" and kelas == "C":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[5]").click()
-    if kodeMatkul == "TI41092" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[2]").click()
-    if kodeMatkul == "TI41092" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[3]").click()
-    if kodeMatkul == "TI43436" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[4]").click()
-    if kodeMatkul == "TI43456" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[5]").click()
-    if kodeMatkul == "TI43456" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[8]").click()
-    if kodeMatkul == "TI43456" and kelas == "C":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[7]").click()
-    if kodeMatkul == "LB42052" and kelas == "E":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[8]").click()
-    if kodeMatkul == "LB42052" and kelas == "F":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[9]").click()
-    if kodeMatkul == "TI41112" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[2]").click()
-    if kodeMatkul == "TI41112" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[3]").click()
-    if kodeMatkul == "TI41254" and kelas == "A":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[4]").click()
-    if kodeMatkul == "TI41254" and kelas == "B":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[5]").click()
-    if kodeMatkul == "TI41254" and kelas == "C":
-        driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[3]/td[2]/select/option[6]").click()
+    base_option_xpath = "/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/"
+    list_kodeMatkul = [
+    ("TI43274", "A", "p/table/tbody/tr[3]/td[2]/select/option[3]"),
+    ("TI43274", "B", "p/table/tbody/tr[3]/td[2]/select/option[4]"),
+    ("TI43274", "C", "p/table/tbody/tr[3]/td[2]/select/option[5]"),
+
+    ("TI43142", "A", "p/table/tbody/tr[3]/td[2]/select/option[2]"),
+    ("TI43142", "B", "p/table/tbody/tr[3]/td[2]/select/option[3]"),
+
+    ("TI43284", "A", "p/table/tbody/tr[3]/td[2]/select/option[4]"),
+    ("TI43284", "B", "p/table/tbody/tr[3]/td[2]/select/option[5]"),
+    ("TI43284", "C", "p/table/tbody/tr[3]/td[2]/select/option[6]"),
+
+    ("TI43446", "A", "p[1]/table/tbody/tr[3]/td[2]/select/option[2]"),
+
+    ("TI3466", "A", "p[1]/table/tbody/tr[3]/td[2]/select/option[3]"),
+    ("TI3466", "B", "p[1]/table/tbody/tr[3]/td[2]/select/option[4]"),
+    ("TI3466", "C", "p[1]/table/tbody/tr[3]/td[2]/select/option[5]"),
+
+    ("TI41092", "A", "p[1]/table/tbody/tr[3]/td[2]/select/option[2]"),
+    ("TI41092", "B", "p[1]/table/tbody/tr[3]/td[2]/select/option[3]"),
+
+    ("TI43436", "A", "p[1]/table/tbody/tr[3]/td[2]/select/option[4]"),
+
+    ("TI43456", "A", "p[1]/table/tbody/tr[3]/td[2]/select/option[5]"),
+    ("TI43456", "B", "p[1]/table/tbody/tr[3]/td[2]/select/option[8]"),
+    ("TI43456", "C", "p[1]/table/tbody/tr[3]/td[2]/select/option[7]"),
+
+    ("LB42052", "E", "p[1]/table/tbody/tr[3]/td[2]/select/option[8]"),
+    ("LB42052", "F", "p[1]/table/tbody/tr[3]/td[2]/select/option[9]"),
+
+    ("TI41112", "A", "p[1]/table/tbody/tr[3]/td[2]/select/option[2]"),
+    ("TI41112", "B", "p[1]/table/tbody/tr[3]/td[2]/select/option[3]"),
+
+    ("TI41254", "A", "p[1]/table/tbody/tr[3]/td[2]/select/option[4]"),
+    ("TI41254", "B", "p[1]/table/tbody/tr[3]/td[2]/select/option[5]"),
+    ("TI41254", "C", "p[1]/table/tbody/tr[3]/td[2]/select/option[6]"),]
+
+    for item in list_kodeMatkul:
+        if kodeMatkul == item[0] and kelas == item[1]:
+            driver.find_element_by_xpath(f"{base_option_xpath}{item[2]}").click()
 
 def TambahPresensi():
     driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[2]/table/tbody/tr[5]/td/input[2]").click()
@@ -137,7 +124,7 @@ def Mahasiswa():
 
     index = 1
     for i in range(jumMahasiswa):
-        data = driver.find_element_by_xpath("/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[4]/table/tbody/tr["+str(index)+"]/td[2]").text
+        data = driver.find_element_by_xpath(f"/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[4]/table/tbody/tr[{index}]/td[2]").text
         index += 1
         print(i)
         print(data)
